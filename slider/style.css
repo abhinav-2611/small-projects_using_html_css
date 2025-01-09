@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", system-ui;
+    overflow: hidden;
+  }
+  
+  .main_box {
+    background: url(photo.jpg);
+    height: 100vh;
+    background-size: cover;
+  }
+  
+  .btn_one {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    font-weight: 700;
+    left: 16px;
+    line-height: 60px;
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Transition added for click effect */
+  }
+  
+  .btn_one:active {
+    transform: scale(0.9); /* Shrinks on click */
+  }
+  
+  .sidebar_menu {
+    position: fixed;
+    left: -300px; /* Hide sidebar off-screen */
+    height: 100vh;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    transition: left 0.3s ease; /* Smooth slide-in transition */
+  }
+  
+  .sidebar_menu .logo {
+    width: 100%;
+    line-height: 60px;
+    box-shadow: 0 6px 6px rgba(255, 255, 255, 0.1);
+  }
+  
+  .sidebar_menu .logo a {
+    position: relative;
+    left: 60px;
+    color: white;
+    text-decoration: none;
+    font-size: x-large;
+    font-weight: 500;
+  }
+  
+  .sidebar_menu .menu {
+    color: white;
+  }
+  
+  .menu li {
+    /* height: 50px; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+  }
+  
+  .sidebar_menu .menu li a {
+    text-decoration: none;
+    color: white;
+    padding-left: 5px;
+  }
+  
+  .sidebar_menu .social_media ul a i {
+    color: white;
+    opacity: 0.5;
+    padding-left: 10px;
+    transition: 0.1s;
+  }
+  
+  .sidebar_menu .social_media {
+    width: 200px;
+    position: absolute;
+    left: 70px;
+    top: 95%;
+  }
+  
+  .sidebar_menu .menu li:hover {
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+  }
+  
+  .sidebar_menu .social_media a i:hover {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  
+  /* Checkbox controls sidebar */
+  #check {
+    display: none;
+  }
+  
+  #check:checked ~ .sidebar_menu {
+    left: 0; /* Slide sidebar into view when checkbox is checked */
+  }
+  
+  .btn_two {
+    color: gray;
+    font-size: 20px;
+    position: absolute;
+    left: 270px;
+    top: 15px;
+    cursor: pointer;
+    opacity: 0; /* Initially hidden */
+  }
+  
+  #check:checked ~ .sidebar_menu .btn_two {
+    opacity: 1; /* Show close button when sidebar is active */
+  }
+  .btn_two:active
+  {
+    transform: scale(0.9);
+  }
+  #check:checked ~.btn_one
+  {
+    opacity: 0;
+  }
